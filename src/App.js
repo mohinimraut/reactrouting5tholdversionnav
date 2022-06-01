@@ -12,7 +12,7 @@ import About from './About';
 import ContactUS from './ContactUS';
 import Feedback from './Feedback';
 import Services from './Services';
-
+import PageNotFound from './PageNotFound';
 function App() {
   return (
     <>
@@ -37,10 +37,10 @@ function App() {
       
           </Route>
           
-          {/* <Route path="/" element={<h1>Welcome</h1>}></Route> */}
+          <Route exact path="/" component={Home}></Route>
 
           
-          {/* <Route path='*' component={<h1>Page not Found</h1>}></Route> */}
+          <Route path='*' component={PageNotFound}></Route>
 
         </Switch>
       </Router>
